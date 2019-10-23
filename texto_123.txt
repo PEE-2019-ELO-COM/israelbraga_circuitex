@@ -1,0 +1,8 @@
+Projeto: Circuitex
+
+linguagem a ser utilizada: Python
+biblioteca gráfica a ser utilizada: tkinter
+
+Inputs: O cliente entrará, na box de cada ramo craida pelo tkinter, com o valor da fonte do ramo, resistência, capacitância e indutância.
+O programa, atavés da classe ramo que inclui cada um dos itens surpacitados executará o teorema de Milman, crará um objeto para cada ramo. retornando o valor
+da ddp entre o terra e o Va do circuito. 
