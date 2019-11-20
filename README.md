@@ -26,4 +26,8 @@ Logo em seguida, o programa retornará o valor do sinal senoidal no domínio do 
 
 # Extras
 [código comentado](https://github.com/PEE-2019-ELO-COM/israelbraga_circuitex/blob/master/programa_comentado.txt)
+
+
+
+
 [diagrama de classes](https://github.com/PEE-2019-ELO-COM/israelbraga_circuitex/blob/master/diagrama_classes_prog.png)
