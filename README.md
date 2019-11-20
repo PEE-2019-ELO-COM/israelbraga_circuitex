@@ -10,7 +10,11 @@
 # Instruções de uso
   O usuário, na posse de vários ramos de um circuito irá inserir em cada infromação de cada ramo. É Necessário ressaltar que o programa foi feito para o regime estacionário de circuitos senoidais. Dessa forma, devemos colocar a frequência angular da fonte de tensão, seu Vpp, sua fase e seus elementos passivos.
   
+Tela inicial apresentada ao usuário:
 
+![imagem1_exemplo](https://user-images.githubusercontent.com/55092617/69278868-e9f59180-0bc1-11ea-9202-63dbe73a7d4b.png)
+  
+Após algumas inserções de informação, o usuário chega no último ramo:
 
 
 
