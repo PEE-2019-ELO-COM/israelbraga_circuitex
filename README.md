@@ -6,4 +6,7 @@
   A ideia surgiu através da cadeira de circuitos elétricos 1, onde usualmente era necessário obter resultados desses circuitos e demandava-se um tempo razoável de cálculo, em especial por envolver números complexos.
 # Funções do programa
   O programa trabalhará recebendo entradas de cada ramo do circuito (frequência angular, resistência, capacitância, indutância e Vpp). Efetuará o teorema de Milman no domínio dos números complexos e devolverá a forma de onda senoidal resultante da difereça de potencial comum a todos os ramos.
+
+# Instruções de uso
+  O usuário, na posse de vários ramos de um circuito irá inserir em cada infromação de cada ramo. É Necessário ressaltar que o programa foi feito para o regime estacionário de circuitos senoidais. Dessa forma, devemos colocar a frequência angular da fonte de tensão, seu Vpp, sua fase e seus elementos passivos.
   
