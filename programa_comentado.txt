@@ -1,0 +1,124 @@
+
+from tkinter import *
+import math
+
+
+#criando a classe ramo, que possui as entradas do teorema de Milman, bem como num1 que é um contador de passos
+class Ramo():
+    def __init__(self):
+        self.numerador=0
+        self.denominador=0
+        self.num1=0
+   
+#inciiando o objeto ramo
+ramo = Ramo()
+
+
+
+
+#iniciando o objeto janela, que é a interface gráfica
+janela = Tk()
+
+#título da interface gráfica
+janela.title('CircuitEX')
+
+
+
+#função que executa o teorema de Milman com as entradas e as limpa para o próximo passo
+
+def bt1_click():
+    ramo.num1=ramo.num1+1
+    lb_contador=Label(janela,text="numero de ramos inseridos {}".format(ramo.num1))
+    lb_contador.grid(row=24,column=1)
+    ramo.denominador=ramo.denominador+1/(complex(0,float(ed_freq.get())*float(ed_henry.get()))+float(ed_resist.get())+complex(0,-1/( float(ed_farad.get())*float(ed_freq.get()))))                           
+    #print(ramo.denominador)#denominador está ok
+    ramo.numerador=ramo.numerador+float(ed_amplitude.get())*complex(math.cos(float(ed_fase.get())),math.sin(float(ed_fase.get())))/(complex(0,float(ed_freq.get())*float(ed_henry.get()))+float(ed_resist.get())+complex(0,-1/( float(ed_farad.get())*float(ed_freq.get()))))
+    print(ramo.numerador/ramo.denominador)
+    a=ramo.numerador/ramo.denominador
+    ed_freq.delete(first=0,last=22)
+    ed_henry.delete(first=0,last=22)
+    ed_farad.delete(first=0,last=22)
+    ed_resist.delete(first=0,last=22)
+    ed_fase.delete(first=0,last=22)
+    ed_amplitude.delete(first=0,last=22)
+    return a
+
+#função que executa o teorema de Milman e finaliza o programa
+
+def bt2_click():
+    ramo.num1=ramo.num1+1
+    lb_contador=Label(janela,text="numero de ramos inseridos {}".format(ramo.num1))
+    lb_contador.grid(row=24,column=1)
+    ramo.denominador=ramo.denominador+1/(complex(0,float(ed_freq.get())*float(ed_henry.get()))+float(ed_resist.get())+complex(0,-1/( float(ed_farad.get())*float(ed_freq.get()))))                           
+    #print(ramo.denominador)#denominador está ok
+    ramo.numerador=ramo.numerador+float(ed_amplitude.get())*complex(math.cos(float(ed_fase.get())),math.sin(float(ed_fase.get())))/(complex(0,float(ed_freq.get())*float(ed_henry.get()))+float(ed_resist.get())+complex(0,-1/( float(ed_farad.get())*float(ed_freq.get()))))
+    print(ramo.numerador/ramo.denominador)
+    print("resposta final")
+    a=ramo.numerador/ramo.denominador
+    lb_resposta= Label(janela,text="\n\ncos({}t)\n resposta final".format(float(ed_freq.get())))
+    lb_resposta.grid(row=30,column=1)
+    a=ramo.numerador/ramo.denominador
+    ed_freq.delete(first=0,last=22)
+    ed_henry.delete(first=0,last=22)
+    ed_farad.delete(first=0,last=22)
+    ed_resist.delete(first=0,last=22)
+    ed_fase.delete(first=0,last=22)
+    ed_amplitude.delete(first=0,last=22)
+    
+
+
+
+
+#Inserindo entradas, botões e labels na interface gráfica. Bem como suas posições (grid)
+
+ed_amplitude=(Entry(janela))
+ed_amplitude.grid(row=0,column=1)
+lb_amplitude= Label(janela,text="Amplitude")
+lb_amplitude.grid(row=0,column=0)
+
+ed_fase=(Entry(janela))
+ed_fase.grid(row=1,column=1)
+lb_fase= Label(janela,text="Fase")
+lb_fase.grid(row=1,column=0)
+
+ed_resist=(Entry(janela))
+ed_resist.grid(row=2,column=1)
+lb_resist= Label(janela,text="Resistência")
+lb_resist.grid(row=2,column=0)
+
+ed_farad=(Entry(janela))
+ed_farad.grid(row=3,column=1)
+lb_farad= Label(janela,text="Capacitância")
+lb_farad.grid(row=3,column=0)
+
+ed_henry=(Entry(janela))
+ed_henry.grid(row=4,column=1)
+lb_henry= Label(janela,text="Indutância")
+lb_henry.grid(row=4,column=0)
+
+ed_freq=(Entry(janela))
+ed_freq.grid(row=5,column=1)
+lb_freq= Label(janela,text="Frequência")
+lb_freq.grid(row=5,column=0)
+
+
+bt1=Button(janela,width=10,text="Submeter",command=bt1_click)
+
+bt1.grid(row=20,column=1)
+
+bt2=Button(janela,width=10,text="Finalizar tudo",command=bt2_click)
+
+bt2.grid(row=23,column=1)
+
+
+lb_instrucoes= Label(janela,text="Insira em cada um dos campos \n os valores de cada elemento do circuito \n Ex: Resistência, frequência angular")
+lb_instrucoes.grid(row=15,column=1)
+
+
+
+
+
+#Dimensões da janela aberta e posicionamento na tela do computador
+janela.geometry("400x400+250+200")
+#loop principal da janela
+janela.mainloop()
