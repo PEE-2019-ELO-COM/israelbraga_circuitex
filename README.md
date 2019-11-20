@@ -22,3 +22,8 @@ Após algumas inserções de informação, o usuário chega no último ramo:
 
 
 Logo em seguida, o programa retornará o valor do sinal senoidal no domínio do tempo. Bem como, uma janela com o plota do gráfico.
+
+
+# Extras
+[código comentado](https://github.com/PEE-2019-ELO-COM/israelbraga_circuitex/blob/master/programa_comentado.txt)
+[diagrama de classes](https://github.com/PEE-2019-ELO-COM/israelbraga_circuitex/blob/master/diagrama_classes_prog.png)
