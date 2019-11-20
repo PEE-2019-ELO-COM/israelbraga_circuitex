@@ -15,3 +15,6 @@
 
 
 ![imagem2_exemplo](https://user-images.githubusercontent.com/55092617/69278423-13fa8400-0bc1-11ea-831f-7890bac99fb6.png)
+
+
+Logo em seguida, o programa retornará o valor do sinal senoidal no domínio do tempo. Bem como, uma janela com o plota do gráfico.
