@@ -1,6 +1,6 @@
-
 from tkinter import *
 import math
+import cmath
 
 
 #criando a classe ramo, que possui as entradas do teorema de Milman, bem como num1 que é um contador de passos
@@ -55,7 +55,8 @@ def bt2_click():
     print(ramo.numerador/ramo.denominador)
     print("resposta final")
     a=ramo.numerador/ramo.denominador
-    lb_resposta= Label(janela,text="\n\ncos({}t)\n resposta final".format(float(ed_freq.get())))
+    b=cmath.polar(a)
+    lb_resposta= Label(janela,text="\n Fasor resposta:{}  \n".format(b))
     lb_resposta.grid(row=30,column=1)
     a=ramo.numerador/ramo.denominador
     ed_freq.delete(first=0,last=22)
@@ -73,32 +74,32 @@ def bt2_click():
 
 ed_amplitude=(Entry(janela))
 ed_amplitude.grid(row=0,column=1)
-lb_amplitude= Label(janela,text="Amplitude")
+lb_amplitude= Label(janela,text="Amplitude em volts")
 lb_amplitude.grid(row=0,column=0)
 
 ed_fase=(Entry(janela))
 ed_fase.grid(row=1,column=1)
-lb_fase= Label(janela,text="Fase")
+lb_fase= Label(janela,text="Fase em radianos")
 lb_fase.grid(row=1,column=0)
 
 ed_resist=(Entry(janela))
 ed_resist.grid(row=2,column=1)
-lb_resist= Label(janela,text="Resistência")
+lb_resist= Label(janela,text="Resistência em ohm")
 lb_resist.grid(row=2,column=0)
 
 ed_farad=(Entry(janela))
 ed_farad.grid(row=3,column=1)
-lb_farad= Label(janela,text="Capacitância")
+lb_farad= Label(janela,text="Capacitância em farad")
 lb_farad.grid(row=3,column=0)
 
 ed_henry=(Entry(janela))
 ed_henry.grid(row=4,column=1)
-lb_henry= Label(janela,text="Indutância")
+lb_henry= Label(janela,text="Indutância em Henry")
 lb_henry.grid(row=4,column=0)
 
 ed_freq=(Entry(janela))
 ed_freq.grid(row=5,column=1)
-lb_freq= Label(janela,text="Frequência")
+lb_freq= Label(janela,text="Frequência em rad/s")
 lb_freq.grid(row=5,column=0)
 
 
